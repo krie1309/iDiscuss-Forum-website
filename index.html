@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularApp">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Angular JS Website</title>
+
+        <script src="js/angular.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/app.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="pic/angular.jfif" type="image/x-icon">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="wrap">
+                <!-- navigation menu -->
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#!/" ng-class="{active:part == 'home'}">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="login" href="#!/login" ng-class="{active:part == 'login'}">
+                                <i class="fa-solid fa-shield-keyhole"></i>
+                                <span>Login</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="signup" href="#!/signup" ng-class="{active:part == 'signup'}">
+                                <i class="fa-solid fa-user-plus"></i>
+                                <span>Sign-UP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="about" href="#!/query" ng-class="{active:part == 'about'}">
+                                <i class="fa-solid fa-comment-smile"></i>
+                                <span>Query</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div ng-view> </div>
+
+    </body>
+
+</html>

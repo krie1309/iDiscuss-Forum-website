@@ -1,0 +1,280 @@
+* {
+  background: #111;
+  font-family: consolas;
+}
+html {
+  min-height: 100%;
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+  position: relative;
+  width: 100%;
+}
+body {
+  color: #fff;
+  font-weight: 100;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+/* header section */
+header {
+  height: 110px;
+}
+header .wrap {
+  height: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 17px;
+}
+header nav ul {
+  margin: 1em 0;
+  padding: 0;
+}
+header nav ul li {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+header nav ul li a {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 25px;
+  overflow: hidden;
+  border-radius: 24px;
+  cursor: pointer;
+  color: rgb(34, 255, 207);
+  text-align: center;
+  transition: all 0.3s;
+  font-size: 30px;
+  font-weight: 400;
+}
+/* header nav ul li a {
+  border-radius: 24px;
+  color: rgb(34, 255, 207);
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px 27px;
+  text-decoration: line-through;
+  transition: .5s;
+} */
+header nav ul li a.active {
+  color: rgb(75, 255, 51);
+  /* border: 2px dotted rgb(65, 204, 84); */
+  text-decoration: none;
+  font-weight: 800;
+  transition: all 0.3s;
+  animation: changeColor 2s linear infinite;
+}
+@keyframes changeColor {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+header nav ul li a:hover {
+  color: #c33c3a;
+}
+header nav ul li:nth-child(1) a.active,
+header nav ul li:nth-child(1) a:hover {
+  width: 170px;
+}
+header nav ul li:nth-child(2) a.active,
+header nav ul li:nth-child(2) a:hover {
+  width: 190px;
+}
+header nav ul li:nth-child(3) a.active,
+header nav ul li:nth-child(3) a:hover {
+  width: 220px;
+}
+header nav ul li:nth-child(4) a.active,
+header nav ul li:nth-child(4) a:hover {
+  width: 240px;
+}
+header nav ul li a:hover span {
+  color: #c33c3a;
+}
+header nav ul li a i{
+  font-size: 27px;
+  line-height: 60px;
+  margin-top: 15px;
+  /* transition: all 0.3s ease-out; */
+}
+header nav ul li a span{
+  display: inline-block;
+  font-size: 25px;
+  line-height: 60px;
+  height: 60px;
+  color: rgb(75, 255, 51);
+  transition: all 0.3s ease-out;
+}
+
+/* form css login.html & signup.html */
+span {
+  color: red;
+}
+h2.hel {
+  color: #ddd;
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  margin-bottom: 50px;
+  /* width: 475px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+.form-group {
+  width: 300px;
+}
+input[type="text"],
+input[type="password"] {
+  background: #333;
+  border: none;
+  color: #ccc;
+  transition: 0.5s;
+}
+label {
+  color: #aaa;
+}
+.mar {
+  margin-top: 13px;
+}
+input[type="text"].ng-touched,
+input[type="password"].ng-touched {
+  transition: 0.5s;
+  border: 2px solid red;
+}
+input[type="text"].ng-valid,
+input[type="password"].ng-valid {
+  transition: 0.5s;
+  border: none;
+}
+input[type="text"]:focus.ng-valid,
+input[type="password"].ng-valid:focus {
+  transition: 0.5s;
+  border: 2px solid rgb(0, 255, 0);
+}
+
+/* main.html */
+.hei {
+  /* height: 300px; */
+  height: calc(85vh - 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.type {
+  display: inline-block;
+}
+.static {
+  font-weight: 700;
+  font-size: 50px;
+}
+.dynamic {
+  margin-left: -29px;
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+}
+.dynamic li {
+  list-style: none;
+  font-size: 50px;
+  position: relative;
+  top: 0;
+  animation: slide 10s steps(2) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -120px;
+  }
+}
+.dynamic li span {
+  font-weight: 700;
+  color: #fc6d6d;
+  /* color: #03e9f4; */
+  position: relative;
+}
+.dynamic li span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  border-left: 3px solid #fc6d6d;
+  /* border-left: 3px solid #03e9f4; */
+  background: #111;
+  animation: typing 5s steps(15) infinite;
+}
+@keyframes typing {
+  50% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* about us */
+#rem {
+  margin-top: -20px;
+}
+#icon {
+  display: flex;
+  width: 100vw;
+  height: calc(65vh - 110px);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.qry, .sol {
+  width: 50vw;
+  height: calc(100vh-120px);
+}
+#hello1 {
+  height: 150px;
+  width: 550px;
+  background: #333;
+  border: none;
+  border-radius: 10px;
+  color: #aaa;
+  padding: 10px;
+}
+#hell {
+  height: 50px;
+  padding: 10px;
+  border: none;
+  background: aqua;
+  color: black;
+  margin-top: 50px;
+  border-radius: 10px;
+  width: 200px;
+}
+textarea {
+  resize: none;
+}
+.hello2 {
+  /* margin-top: -100px; */
+  width: 550px;
+  background: #333;
+  border: none;
+  border-radius: 10px;
+  color: #aaa;
+  padding: 10px;
+  height: 250px;
+  text-align: center;
+}
